@@ -18,10 +18,12 @@
 
 body {
   background-color: burlywood;
+  margin: 0px;
 }
 
 nav {
   padding: 30px;
+  background-color: coral;
 }
 
 nav a {

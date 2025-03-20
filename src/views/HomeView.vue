@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <img
+        class="logo"
+        alt="menu logo"
+        src="../assets/logo.png"
+        width="400"
+        height="400"
+      />
+    </header>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+<style>
+header {
+  background-image: url("../assets/farm.jpeg");
+  background-repeat: repeat-x; /* This repeats the image only horizontally */
+  background-size: cover; /* Ensures the image covers the entire width */
 }
-</script>
+</style>
