@@ -1,0 +1,6 @@
+{
+  "menu": [
+    { "name": "paradox soup", "price": 4.5, "key": 0 },
+    { "name": "tsa salad", "price": 10, "key": 1 }
+  ]
+}
