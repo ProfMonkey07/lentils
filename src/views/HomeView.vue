@@ -28,9 +28,9 @@
     <footer>
       <div id="quick">
         <h2>Quick Links</h2>
-        <nav>
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
+        <nav class="bottom">
+          <router-link to="/">Home</router-link><br>
+          <router-link to="/about">About</router-link><br>
           <router-link to="/menu">Menu</router-link>
         </nav>
       </div>
@@ -55,8 +55,10 @@
           <ul>9:30 AM - 9:00 PM</ul>
         </li>
       </div>
-      <div>
-        <p></p>
+      <div id="social">
+        <p>Stay connected and follow us on social media for the latest updates and seasonal specials!</p>
+        <p>Instagram: @lentilstoladles</p>
+        <p>Facebook: Lentils to Ladles</p>
       </div>
     </footer>
   </div>
@@ -71,6 +73,11 @@ header {
 footer
 {
   display: flex;
+}
+.bottom a
+{
+  color: #2c3e50;
+  text-decoration: none;
 }
 #hours ul
 {
