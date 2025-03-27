@@ -61,9 +61,12 @@
 <style>
 footer {
   display: flex;
+  justify-content:space-around;
+  font-size: 14px;
+  background-color: #91a36f;
 }
 .bottom a {
-  color: #2c3e50;
+  color: #3f4936;
   text-decoration: none;
 }
 #hours ul {
@@ -77,7 +80,7 @@ footer {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #3f4936;
 }
 
 body {
@@ -87,15 +90,15 @@ body {
 
 .top {
   padding: 30px;
-  background-color: coral;
+  background-color: #91a36f;
 }
 
 .top a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #3f4936;
 }
 
 .top a.router-link-exact-active {
-  color: #42b983;
+  color: #4c5a40;
 }
 </style>

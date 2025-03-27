@@ -57,10 +57,4 @@ header {
   background-repeat: repeat-x; /* This repeats the image only horizontally */
   background-size: cover; /* Ensures the image covers the entire width */
 }
-#hours ul {
-  list-style-type: none;
-}
-#hours li {
-  display: flex;
-}
 </style>
