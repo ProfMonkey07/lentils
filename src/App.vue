@@ -66,7 +66,12 @@ footer {
   color: #2c3e50;
   text-decoration: none;
 }
-
+#hours ul {
+  list-style-type: none;
+}
+#hours li {
+  display: flex;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
