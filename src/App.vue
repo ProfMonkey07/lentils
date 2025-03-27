@@ -7,7 +7,7 @@
   <router-view />
   <footer>
     <div id="quick">
-      <h2>Quick Links</h2>
+      <h3>Quick Links</h3>
       <nav class="bottom">
         <router-link to="/">Home</router-link><br />
         <router-link to="/about">About</router-link><br />
@@ -15,13 +15,13 @@
       </nav>
     </div>
     <div id="contact">
-      <h2>Contact US</h2>
+      <h3>Contact US</h3>
       <p>123 SE Division St, Portland, OR 97211</p>
       <p>(503) 123-1234</p>
       <p>contact@lentilstoladles.com</p>
     </div>
     <div id="hours">
-      <h2>Operating Hours</h2>
+      <h3>Operating Hours</h3>
       <li>
         <ul>
           Monday-Friday
@@ -59,21 +59,50 @@
 </template>
 
 <style>
+*
+{
+  box-sizing: border-box;
+}
 footer {
   display: flex;
   justify-content:space-around;
-  font-size: 14px;
+  font-size: .9rem;
   background-color: #91a36f;
+  padding: 1%;
+}
+#quick
+{
+  width:25%;
+  text-align: left;
 }
 .bottom a {
   color: #3f4936;
   text-decoration: none;
 }
+#contact
+{
+  width:25%;
+  text-align: left;
+}
+#hours
+{
+  width:25%;
+  text-align:left;
+  
+}
 #hours ul {
   list-style-type: none;
+  padding-left: 0;
 }
 #hours li {
   display: flex;
+  justify-content: space-between;
+}
+#social
+{
+  width:25%;
+  text-align:left;
+  padding: 1%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
