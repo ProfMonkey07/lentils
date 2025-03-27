@@ -4,13 +4,13 @@
 //and the trash icon etc, then report updates to a function in menuview
 //that will update the order array
 import { defineProps } from "vue";
-defineProps(["name", "price", "itemid"]);
+defineProps(["name", "price", "index"]);
 </script>
 
 <template>
   <div class="item">
     {{ name }}
-    <button @click="$emit('deleteorder', itemid)">delete item</button>
+    <button @click="$emit('deleteorder', index)">delete item</button>
   </div>
 </template>
 

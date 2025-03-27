@@ -11,16 +11,16 @@ const order = ref([]);
 function addorder(id) {
   console.log(id);
   order.value.push(menuitems.value[id]);
-  order.value[order.value.length - 1]["index"] = order.value.length;
+  order.value[order.value.length - 1]["index"] = order.value.length - 1;
   console.log(order);
 }
 
 function deleteitem(id) {
-  console.log("deleted");
-  order.value.pop(id);
+  order.value.splice(id, 1);
   for (let i = 0; i < order.value.length; i++) {
     order.value[i]["index"] = i;
   }
+  console.log(order.value);
 }
 </script>
 <template>
@@ -41,7 +41,7 @@ function deleteitem(id) {
       @deleteorder="deleteitem"
       :name="item.name"
       :price="item.price"
-      :itemid="item.index"
+      :index="item.index"
     />
   </div>
 </template>
