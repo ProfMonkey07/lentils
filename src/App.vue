@@ -6,7 +6,15 @@
   </nav>
   <router-view />
   <footer>
-    <div id="quick">
+    <div id="social" class="in">
+      <p>
+        Stay connected and follow us on social media for the latest updates and
+        seasonal specials!
+      </p>
+      <p>Instagram: @lentilstoladles</p>
+      <p>Facebook: Lentils to Ladles</p>
+    </div>
+    <div id="quick" class="in">
       <h3>Quick Links</h3>
       <nav class="bottom">
         <router-link to="/">Home</router-link><br />
@@ -14,13 +22,13 @@
         <router-link to="/menu">Menu</router-link>
       </nav>
     </div>
-    <div id="contact">
+    <div id="contact" class="in">
       <h3>Contact US</h3>
       <p>123 SE Division St, Portland, OR 97211</p>
       <p>(503) 123-1234</p>
       <p>contact@lentilstoladles.com</p>
     </div>
-    <div id="hours">
+    <div id="hours" class="in">
       <h3>Operating Hours</h3>
       <li>
         <ul>
@@ -47,14 +55,6 @@
         </ul>
       </li>
     </div>
-    <div id="social">
-      <p>
-        Stay connected and follow us on social media for the latest updates and
-        seasonal specials!
-      </p>
-      <p>Instagram: @lentilstoladles</p>
-      <p>Facebook: Lentils to Ladles</p>
-    </div>
   </footer>
 </template>
 
@@ -63,32 +63,82 @@
 {
   box-sizing: border-box;
 }
-footer {
-  display: flex;
-  justify-content:space-around;
-  font-size: .9rem;
-  background-color: #91a36f;
-  padding: 1%;
-}
-#quick
+@media screen and (max-width: 600px)
 {
-  width:25%;
-  text-align: left;
+  footer{
+    display: block;
+    background-color: #91a36f;
+  }
 }
-.bottom a {
-  color: #3f4936;
-  text-decoration: none;
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #91a36f;
+  }
+  #quick
+  {
+    text-align: left;
+    padding: 1%;
+
+  }
+  .bottom a 
+  {
+    color: #3f4936;
+    text-decoration: none;
+  }
+  #contact
+  {
+    text-align: left;
+    padding: 1%;
+
+  }
+  #hours
+  {
+    text-align:left;
+    padding: 1%;
+    
+  }
+  #social
+  {
+    text-align:left;
+    padding: 1%;
+  }
 }
-#contact
-{
-  width:25%;
-  text-align: left;
-}
-#hours
-{
-  width:25%;
-  text-align:left;
-  
+@media screen and (min-width: 1023px) {
+  footer {
+    display: flex;
+    justify-content:space-around;
+    font-size: .9rem;
+    background-color: #91a36f;
+    padding: 1%;
+  }
+  #quick
+  {
+    width:25%;
+    text-align: left;
+  }
+  .bottom a {
+    color: #3f4936;
+    text-decoration: none;
+  }
+  #contact
+  {
+    width:25%;
+    text-align: left;
+  }
+  #hours
+  {
+    width:25%;
+    text-align:left;
+    
+  }
+  #social
+  {
+    width:25%;
+    text-align:left;
+    padding: 1%;
+  }
 }
 #hours ul {
   list-style-type: none;
@@ -98,12 +148,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-#social
-{
-  width:25%;
-  text-align:left;
-  padding: 1%;
-}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -130,4 +175,5 @@ body {
 .top a.router-link-exact-active {
   color: #4c5a40;
 }
+
 </style>
