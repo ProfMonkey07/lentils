@@ -30,31 +30,35 @@
           other light meals for those with a smaller appetite.
         </p>
         <h3>Featured Soups</h3>
-        <li>
-          <ul>
+        <ul>
+          <li>
             <b>Lentil Stew</b>
             - A classic, hearty mix of lentils and vegetables in a savory broth
-          </ul>
-          <ul>
+          </li>
+          <li>
             <b>Lemon Rosemary White Bean Soup</b>
             - A hearty white bean soup with lemon, herbs and veggies.
-          </ul>
-          <ul>
+          </li>
+          <li>
             <b>Rosted Kabocha Squash Soup</b>
             - thick and creamy, bursting with pops of ginger, cumin, and
             coriander.
-          </ul>
-        </li>
+          </li>
+        </ul>
       </div>
     </body>
   </div>
 </template>
 
 <style>
-header {
-  background-image: url("../assets/farm.jpeg");
+  header {
+    background-image: url("../assets/farm.jpeg");
 
-  background-repeat: repeat-x; /* This repeats the image only horizontally */
-  background-size: cover; /* Ensures the image covers the entire width */
-}
+    background-repeat: repeat-x; /* This repeats the image only horizontally */
+    background-size: cover; /* Ensures the image covers the entire width */
+  }
+  li
+  {
+    list-style-type: none;
+  }
 </style>
