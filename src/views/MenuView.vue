@@ -14,8 +14,8 @@ function addorder(id) {
   order.value[order.value.length - 1]["index"] = order.value.length - 1;
   console.log(order);
 }
-
 function deleteitem(id) {
+  console.log(id);
   order.value.splice(id, 1);
   for (let i = 0; i < order.value.length; i++) {
     order.value[i]["index"] = i;
@@ -35,19 +35,28 @@ function deleteitem(id) {
       :id="item.key"
     />
   </div>
-  your order starts below
-  <div v-for="item in order" :key="item.key">
-    <orderitem
-      @deleteorder="deleteitem"
-      :name="item.name"
-      :price="item.price"
-      :index="item.index"
-    />
+  <div class="order">
+    your order:
+    <br />
+    <div v-for="item in order" :key="item.key">
+      <orderitem
+        @deleteorder="deleteitem"
+        :name="item.name"
+        :price="item.price"
+        :index="item.index"
+      />
+    </div>
+    <label for="fname">email:</label>
+    <input type="email" />
+    <button>place order</button>
   </div>
 </template>
 
 <style>
 menuitem {
   background-color: burlywood;
+}
+.order {
+  background-color: forestgreen;
 }
 </style>

@@ -1,8 +1,4 @@
 <script setup>
-//commenting here so I dont forget later but the plan is basically to
-//feed in the relevant data to the order item which will handle sides/toppings
-//and the trash icon etc, then report updates to a function in menuview
-//that will update the order array
 import { defineProps } from "vue";
 defineProps(["name", "price", "index"]);
 </script>
@@ -10,15 +6,21 @@ defineProps(["name", "price", "index"]);
 <template>
   <div class="item">
     {{ name }}
-    <button @click="$emit('deleteorder', index)">delete item</button>
+    <button @click="$emit('deleteorder', index)">
+      <img src="../assets/trash_icon.png" width="10px" height="10px" />
+    </button>
   </div>
 </template>
 
 <style>
 .item {
-  padding: 10px;
+  width: 10%;
+  padding: 10px 5px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
   border-radius: 10px;
-  background-color: brown;
+  background-color: white;
   outline-style: solid;
   outline-color: black;
   outline-width: 1px;
