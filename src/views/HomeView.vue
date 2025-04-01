@@ -159,6 +159,11 @@ header {
   {
     max-width: 450px;
   }
+  h2 {
+  font-family: serif;
+  font-weight: bold;
+  font-style: normal;
+}
 @media screen and (max-width: 600px) {
   .container{
     display: block;
