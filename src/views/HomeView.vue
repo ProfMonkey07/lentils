@@ -51,14 +51,18 @@
 </template>
 
 <style>
-  header {
-    background-image: url("../assets/farm.jpeg");
+header {
+  background-image: url("../assets/farm.jpeg");
 
-    background-repeat: repeat-x; /* This repeats the image only horizontally */
-    background-size: cover; /* Ensures the image covers the entire width */
-  }
-  li
-  {
-    list-style-type: none;
-  }
+  background-repeat: repeat-x; /* This repeats the image only horizontally */
+  background-size: cover; /* Ensures the image covers the entire width */
+}
+li {
+  list-style-type: none;
+}
+h2 {
+  font-family: serif;
+  font-weight: bold;
+  font-style: normal;
+}
 </style>
