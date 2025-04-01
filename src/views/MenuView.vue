@@ -10,7 +10,7 @@ const menuitems = ref(data);
 const order = ref([]);
 function addorder(id) {
   console.log(id);
-  order.value.push(menuitems.value[id]);
+  order.value.push(JSON.parse(JSON.stringify(menuitems.value[id])));
   order.value[order.value.length - 1]["index"] = order.value.length - 1;
   console.log(order);
 }
