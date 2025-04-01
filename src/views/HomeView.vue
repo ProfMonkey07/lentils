@@ -112,19 +112,19 @@
 </template>
 
 <style>
-  header {
-    background-image: url("../assets/farm.jpeg");
+header {
+  background-image: url("../assets/farm.jpeg");
 
     background-repeat: repeat-x; /* This repeats the image only horizontally */
     background-size: cover; /* Ensures the image covers the entire width */
   }
-  #about
-  {
-    margin: 20px 0px;
-  }
   li
   {
     list-style-type: none;
+  }
+  #about
+  {
+    margin: 20px 0px;
   }
   p
   {
