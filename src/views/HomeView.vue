@@ -5,21 +5,21 @@
         class="logo"
         alt="menu logo"
         src="../assets/logo.png"
-        width="400"
-        height="400"
+        width="300"
+        height="300"
       />
     </header>
     <body>
+      <h1>Lentils To Ladles Cozy Soup Kitchen</h1>
       <div id="about">
-        <h2>About Us</h2>
-        <p>
-          At Lentils to Ladles, we believe that good, healthy food starts with
-          simple practices and good farming. Nestled in the vibrant Division
-          District of Portland Oregon, our cozy soup kitchen is dedicated to
-          serving delicious plant-based meals that comfort you with every bite.
-          Whether you're looking for a nourishing bowl of soup or a welcoming
-          space to enjoy a home-cooked meal, come in and enjoy.
-        </p>
+        <section>
+          <h2>Our Story</h2>
+          <p class="text"> 
+            At Lentils to Ladles, we believe that good, healthy food starts with simple practices and good farming.
+          </p>
+          <button class="text" type="button"><router-link to="/about">Learn More</router-link></button>
+        </section>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUbmGH62AaVUIYoyhLobo1rYuDS06tCx_Nw&s" alt="cozy kitchen">
       </div>
       <div class="container">
         <div id="menu">
@@ -46,6 +46,7 @@
               coriander.
             </li>
           </ul>
+          <button type="button"> <router-link to="/menu">View Full Menu</router-link></button>
         </div>
         <div id="hoursH">
           <h2>Operating Hours</h2>
@@ -114,9 +115,45 @@
 <style>
 header {
   background-image: url("../assets/farm.jpeg");
-
     background-repeat: repeat-x; /* This repeats the image only horizontally */
     background-size: cover; /* Ensures the image covers the entire width */
+  }
+  #about button
+  {
+    justify-self: center;
+    min-width: 100px;
+    height: 50px;
+    font-size: larger;
+    background-color: #A34E14;
+    border: 1px solid #A34E14;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+    margin: 10px 0px 20px 0px;
+  }
+  #about button a{
+    text-decoration: none;
+    color: rgb(231, 191,142);
+  }
+  #menu button
+  {
+    min-width: 100px;
+    height: 50px;
+    font-size: larger;
+    background-color: #A34E14;
+    border: 1px solid #A34E14;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+    margin: 10px 0px 20px 0px;
+  }
+  #menu button a{
+    text-decoration: none;
+    color: rgb(231, 191,142);
   }
   li
   {
@@ -124,7 +161,29 @@ header {
   }
   #about
   {
-    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  #about section
+  {
+    padding: 10px;
+    max-width: 500px;
+    margin: 0px auto;
+  }
+  #about img
+  {
+    margin: auto;
+  }
+  .text
+  {
+    justify-self: left;
+  }
+  #about p
+  {
+    text-align: center;
+    font-size: 20px;
   }
   p
   {
@@ -160,11 +219,20 @@ header {
     max-width: 450px;
   }
   h2 {
-  font-family: serif;
-  font-weight: bold;
-  font-style: normal;
-}
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  h1{
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+  }
 @media screen and (max-width: 600px) {
+  #about
+  {
+    display: block;
+  }
   .container{
     display: block;
   }
@@ -192,8 +260,8 @@ header {
     margin: 0px 20px 20px 20px;
     border: 2px solid rgb(231, 191,142);
     border-radius: 5px;
+    align-content:top;
   }
-  
 }
 @media screen and (min-width: 1023px) {
   .container{
