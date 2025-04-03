@@ -322,10 +322,12 @@ header {
 }
 </style>
 <script>
+  import { VueperSlides, VueperSlide } from 'vueperslides'
+  import 'vueperslides/dist/vueperslides.css'
   export default{
     components: {VueperSlides, VueperSlide}
   }
-  slides: [
+/*  slides: [
       {
         title: 'Farm To Table Experience',
         content: 'Locally sourced ingredients picked and prepared with care',
@@ -342,8 +344,5 @@ header {
         image: require('../assets/variety.jpg')
       }
       ]
-</script>
-<script setup>
-  import { VueperSlides, VueperSlide } from 'vueperslides'
-  import 'vueperslides/dist/vueperslides.css'
+      */
 </script>
