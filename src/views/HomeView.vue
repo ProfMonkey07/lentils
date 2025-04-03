@@ -10,16 +10,43 @@
       />
     </header>
     <body>
-      <h1>Lentils To Ladles Cozy Soup Kitchen</h1>
       <div id="about">
         <section>
-          <h2>Our Story</h2>
-          <p class="text"> 
-            At Lentils to Ladles, we believe that good, healthy food starts with simple practices and good farming.
+          <h1>Lentils To Ladles Soup Kitchen</h1> 
+          <p id="desc" class="text"> 
+            Experience our farm-to-table dining with locally sourced ingredients and a feeling of comfort in every bite.
           </p>
           <button class="text" type="button"><router-link to="/about">Learn More</router-link></button>
         </section>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUbmGH62AaVUIYoyhLobo1rYuDS06tCx_Nw&s" alt="cozy kitchen">
+        <div class="slidecont">
+          <div class="Slide">
+            <img src="../assets/soup.jpg" alt="bowl of soup">
+            <div class="text">
+              <h4>Farm To Table Experience</h4>
+              <p>
+                Locally sourced ingredients picked and prepared with care.
+              </p>
+            </div>
+          </div>
+          <div class="Slide">
+            <img src="../assets/chef.jpg" alt="Chef preparing soup">
+            <div class="text">
+              <h4>Hand Crafted </h4>
+              <p>
+                Our chefs bring years of experience and passion, ensuring each bowl is packed with flavor.
+              </p>
+            </div>
+          </div>
+          <div class="Slide">
+            <img src="../assets/variety.jpg" alt="salad">
+            <div class="text">
+              <h4>Something For Everyone </h4>
+              <p>
+                Between our hearty soups, savory salads, and fresh bread, we guarantee that you will find something to suit your taste.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container">
         <div id="menu">
@@ -175,12 +202,21 @@ header {
   #about img
   {
     margin: auto;
+    width:90%;
+  }
+  .Slide .text
+  {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    background-color: rgb(63, 73, 54, 0.4);
+    max-width: 500px;
   }
   .text
   {
     justify-self: left;
   }
-  #about p
+  #about #desc
   {
     text-align: center;
     font-size: 20px;
@@ -227,6 +263,7 @@ header {
     font-family: serif;
     font-weight: bold;
     font-style: normal;
+    font-size: 30px;
   }
 @media screen and (max-width: 600px) {
   #about
