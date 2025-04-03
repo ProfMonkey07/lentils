@@ -19,33 +19,14 @@
           <button class="text" type="button"><router-link to="/about">Learn More</router-link></button>
         </section>
         <div class="slidecont">
-          <div class="Slide">
-            <img id="soup" src="../assets/soup.jpg" alt="bowl of soup">
-            <div id="farm" class="text">
-              <h4>Farm To Table Experience</h4>
-              <p>
-                Locally sourced ingredients picked and prepared with care.
-              </p>
-            </div>
-          </div>
-          <div class="Slide">
-            <img id="chef" src="../assets/chef.jpg" alt="Chef preparing soup">
-            <div id="hand" class="text">
-              <h4>Hand Crafted </h4>
-              <p>
-                Our chefs bring years of experience and passion, ensuring each bowl is packed with flavor.
-              </p>
-            </div>
-          </div>
-          <div class="Slide">
-            <img id="salad" src="../assets/variety.jpg" alt="salad">
-            <div id="variety" class="text">
-              <h4>Something For Everyone </h4>
-              <p>
-                Between our hearty soups, savory salads, and fresh bread, we guarantee that you will find something to suit your taste.
-              </p>
-            </div>
-          </div>
+          <vueper-slides :dragging-distance="50">
+            <vueper-slide
+              v-for="(slide, i) in slides"
+              :key="i"
+              :image="slide.image"
+              :title="slide.title"
+              :content="slide.content"/>
+          </vueper-slides>
         </div>
       </div>
       <div class="container">
@@ -164,6 +145,23 @@ header {
     text-decoration: none;
     color: rgb(231, 191,142);
   }
+  .vueperslides__bullet .default {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: none;
+    transition: 0.3s;
+    width: 16px;
+    height: 16px;
+  }
+
+  .vueperslides__bullet--active .default {background-color: #42b983;}
+
+  .vueperslides__bullet span {
+    display: block;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0.8;
+  }
   #menu button
   {
     min-width: 100px;
@@ -203,14 +201,6 @@ header {
   {
     margin: auto;
     width:90%;
-  }
-  .Slide .text
-  {
-    color: white;
-    text-align: left;
-    font-size: 15px;
-    background-color: rgb(63, 73, 54, 0.4);
-    max-width: 500px;
   }
   #farm
   {
@@ -331,3 +321,29 @@ header {
   }
 }
 </style>
+<script>
+  export default{
+    components: {VueperSlides, VueperSlide}
+  }
+  slides: [
+      {
+        title: 'Farm To Table Experience',
+        content: 'Locally sourced ingredients picked and prepared with care',
+        image: require('../assets/soup.jpg')
+      },
+      {
+        title: 'Hand Crafted',
+        content: 'Our chefs bring years of experience and passion, ensuring each bowl is packed with flavor',
+        image: require('../assets/chef.jpg')
+      },
+      {
+        title: 'Something For Everyone',
+        content: 'Between our hearty soups, savory salads, and fresh bread, we guarantee that you will find something to suit your taste.',
+        image: require('../assets/variety.jpg')
+      }
+      ]
+</script>
+<script setup>
+  import { VueperSlides, VueperSlide } from 'vueperslides'
+  import 'vueperslides/dist/vueperslides.css'
+</script>
