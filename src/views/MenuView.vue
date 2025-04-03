@@ -25,7 +25,7 @@ function deleteitem(id) {
 </script>
 <template>
   <div class="Menu">
-    <h1>This is a menu page</h1>
+    <h1>Explore Our Offerings</h1>
   </div>
   <div v-for="item in menuitems" :key="item.key">
     <menuitem
@@ -58,6 +58,11 @@ menuitem {
   background-color: burlywood;
 }
 .order {
-  background-color: forestgreen;
+  background-color: #8f5732;
+  color:rgb(231, 191,142);
+  padding: 10px;
+}
+h1{
+  margin: 10px;
 }
 </style>
