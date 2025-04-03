@@ -1,8 +1,13 @@
 {
   "menu": [
-    { "name": "paradox soup", "price": 4.5, "key": 0 },
-    { "name": "tsa salad", "price": 10, "key": 1 },
-    {"name": "white bean and kale", "price": 10, "key": 2},
-    {"name": "soup", "price": 10, "key": 3}
+    { "name": "paradox soup", "price": 4.5, "key": 0, "loc": "lentils.jpg" },
+    { "name": "tsa salad", "price": 10, "key": 1, "loc": "lentils.jpg" },
+    {
+      "name": "white bean and kale",
+      "price": 10,
+      "key": 2,
+      "loc": "lentils.jpg"
+    },
+    { "name": "soup", "price": 10, "key": 3, "loc": "lentils.jpg" }
   ]
 }
