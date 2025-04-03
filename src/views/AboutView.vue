@@ -23,7 +23,14 @@
         Supporting local produce doesn't just result in better food, it uplifts
         the community around us as well
       </p>
-      <img class="market" src="../assets/PSU1.jpg" />
+      <h1>sources</h1>
+      <p>
+        To make this project we used the Vue3 web framework with minimal
+        libraries. For information we consulted the Vue documentation,
+        W3schools, madewithvue.com, and stackoverflow. We attempted to use the
+        Vueper library for a carousel component, but scrapped the idea which is
+        why there may be some remnants in the dependencies.
+      </p>
     </div>
   </div>
 </template>
@@ -49,5 +56,10 @@
   background-repeat: repeat-x; /* This repeats the image only horizontally */
   color: white;
   font-size: 150%;
+}
+
+.market {
+  scale: 50%;
+  text-align: center;
 }
 </style>
