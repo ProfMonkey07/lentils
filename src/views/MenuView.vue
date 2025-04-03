@@ -33,7 +33,6 @@ function deleteitem(id) {
       :name="item.name"
       :price="item.price"
       :id="item.key"
-      :loc="item.loc"
     />
   </div>
   <div class="order">

@@ -1,16 +1,8 @@
 {
   "menu": [
-    {
-      "name": "Garden Salad",
-      "price": 10,
-      "key": 0,
-      "loc": "../assets/gardensalad.jpg"
-    },
-    {
-      "name": "Classic Lentil Soup",
-      "price": 10,
-      "key": 1,
-      "loc": "../assets/lentilsoup.webp"
-    }
+    { "name": "paradox soup", "price": 4.5, "key": 0 },
+    { "name": "tsa salad", "price": 10, "key": 1 },
+    {"name": "white bean and kale", "price": 10, "key": 2},
+    {"name": "soup", "price": 10, "key": 3}
   ]
 }

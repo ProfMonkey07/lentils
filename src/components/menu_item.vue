@@ -1,12 +1,11 @@
 <script setup>
 import { defineProps } from "vue";
-defineProps(["name", "price", "id", "loc"]);
+defineProps(["name", "price", "id"]);
 </script>
 
 <template>
   <div class="menuitem">
     <h4>{{ name }} ${{ price }}</h4>
-    <img :src="loc" />
     <button @click="$emit('menuorder', id)">add to cart</button>
   </div>
 </template>
