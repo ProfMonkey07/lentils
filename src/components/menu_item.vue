@@ -9,7 +9,7 @@ function getsource() {
 <template>
   <div class="menuitem">
     <h4>{{ name }} ${{ price }}</h4>
-    <img class="image" :src="getsource()" />
+    <img class="food" :src="getsource()" />
     <button @click="$emit('menuorder', id)">add to cart</button>
   </div>
 </template>
@@ -19,20 +19,23 @@ template {
   display: inline-block;
 }
 .menuitem {
-  display: inline-block;
   background-image: url("../assets/paper.png");
   background-size: auto;
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-top: 10px;
+  text-align: left;
 }
 h4 {
-  display: inline-block;
+  padding: 0px;
+  margin: 0px;
   vertical-align: top;
 }
-.image {
-  vertical-align: middle;
-  display: inline-block;
+.food {
+  position: relative;
+  left: 0;
+  padding: 0px;
+  margin: 0px;
   border-radius: 5px;
   scale: 20%;
 }
